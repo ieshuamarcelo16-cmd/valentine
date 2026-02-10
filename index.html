@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For Rachelle 💘</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Georgia", serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      width: 100%;
+      max-width: 750px;
+      border-radius: 25px;
+      padding: 40px 30px;
+      box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+      position: relative;
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #b1003a;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      color: #444;
+      margin-bottom: 25px;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      color: #333;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      text-align: left;
+      padding: 0 5px;
+    }
+
+    .message span {
+      font-weight: bold;
+      color: #b1003a;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .footer strong {
+      color: #b1003a;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall linear forwards;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) scale(1);
+      }
+      100% {
+        transform: translateY(110vh) scale(1.6);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0px); }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 25px;
+      background: #b1003a;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.25s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #8d002f;
+      transform: scale(1.05);
+    }
+
+    .small {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy Valentine’s, Rachelle 💘</h1>
+    <h2>from someone who’s lucky to have you — <span style="color:#b1003a;">Ieshua</span></h2>
+
+    <div class="message">
+      <p>hi <span>rachelle</span>,</p>
+      <br>
+      <p>
+        i don’t really know the perfect words to explain how much you mean to me,
+        but i just want you to know that you’ve become one of the best parts of my life.
+      </p>
+      <br>
+      <p>
+        your presence is comforting, your smile is addictive, and the way you exist so naturally
+        makes everything feel lighter.
+      </p>
+      <br>
+      <p>
+        i love the little things about you — the way you talk, the way you react,
+        the way you make moments feel special without even trying.
+      </p>
+      <br>
+      <p>
+        and if i’m being honest… i don’t just like you.
+        i’m grateful for you.
+      </p>
+      <br>
+      <p>
+        thank you for being you.
+        thank you for being in my life.
+      </p>
+      <br>
+      <p>
+        i hope you always remember this:
+        no matter what happens, you will always be someone i’ll choose.
+      </p>
+      <br>
+      <p style="text-align:right;">
+        always yours,<br>
+        <span>ieshua</span> 🤍
+      </p>
+    </div>
+
+    <a class="btn" href="#" onclick="showLove()">tap me 💌</a>
+
+    <div class="small">
+      (this website was made only for you.)
+    </div>
+
+    <div class="footer">
+      made with love, effort, and a little bit of obsession 💗
+    </div>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = ["💗","💘","💞","💖","💕","❤️"][Math.floor(Math.random() * 6)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      heart.style.fontSize = (Math.random() * 15 + 15) + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 250);
+
+    function showLove() {
+      alert("rachelle, i love you more than words can explain. happy valentine’s 💘");
+    }
+  </script>
+
+</body>
+</html>
