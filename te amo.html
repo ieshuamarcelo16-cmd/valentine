@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz San Valentín, Rachelle 💘</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Georgia", serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      overflow-x: hidden;
+      animation: pulse 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+      50% { background: linear-gradient(135deg, #ffd6e0, #f0aebc); }
+      100% { background: linear-gradient(135deg, #ffdde1, #ee9ca7); }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.95);
+      width: 100%;
+      max-width: 750px;
+      border-radius: 25px;
+      padding: 50px 35px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+      position: relative;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #b1003a;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .message {
+      font-size: 1.2rem;
+      color: #333;
+      line-height: 2;
+      margin-bottom: 40px;
+      text-align: left;
+      padding: 0 5px;
+    }
+
+    .message span {
+      font-weight: bold;
+      color: #b1003a;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 25px;
+      animation: fall linear forwards;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px) scale(1); }
+      100% { transform: translateY(110vh) scale(2); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0px); }
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 15px 30px;
+      background: #b1003a;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: 0.25s;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #8d002f;
+      transform: scale(1.08);
+    }
+
+    .small {
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(177, 0, 58, 0.95);
+      color: #fff;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 100px 30px;
+      z-index: 10;
+    }
+
+    .overlay button {
+      margin-top: 30px;
+      padding: 10px 25px;
+      background: #fff;
+      color: #b1003a;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- AUDIO -->
+  <audio id="loveMusic" autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>Feliz San Valentín, mi Rachelle 💘</h1>
+    <h2>from someone who feels like the luckiest person alive — <span style="color:#b1003a;">Ieshua</span></h2>
+
+    <div class="message">
+      <p>hi <span>bae</span>,</p>
+      <br>
+      <p>
+        sometimes i just sit back and think about you, and i can’t believe how much light you bring into my life. 
+        every moment with you feels like a memory i never want to end, like time slows down just for us to exist. 
+        i love how effortlessly you make me smile, how your laughter sticks with me even when we’re apart. your voice, 
+        your warmth, your presence, they make the world feel softer and brighter.
+      </p>
+      <br>
+      <p>
+        i don’t just admire you, i cherish you. i notice the smallest things you do, the quiet strength you carry, 
+        and the way you care so genuinely for those around you. it makes me want to be better, just to match a fraction 
+        of your greatness. thank you for being patient with me, for believing in us, and for simply being you. 
+        every day i spend with you reminds me why i’ll always choose you, over and over again. i want you to always feel 
+        how deeply you are loved and how endlessly you are appreciated. being with you makes everything in life feel 
+        possible, and i hope this little website reminds you of just a fraction of the love i have for you.
+      </p>
+      <br>
+      <p style="text-align:right;">
+        always yours,<br>
+        <span>ieshua</span> 🤍
+      </p>
+    </div>
+
+    <a class="btn" href="#" onclick="showLove()">💖 tap me 💖</a>
+
+    <div class="small">
+      (this website was made only for you.)
+    </div>
+
+    <div class="footer">
+      made with love, effort, and a little bit of obsession 💗
+    </div>
+  </div>
+
+  <div class="overlay" id="loveOverlay">
+    <p>bae, every beat of my heart whispers your name. you are my everything, my forever, my home, te amo. 💘</p>
+    <button onclick="closeLove()">close</button>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = ["💗","💘","💞","💖","💕","❤️"][Math.floor(Math.random() * 6)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (Math.random() * 8 + 5) + "s";
+      heart.style.fontSize = (Math.random() * 30 + 25) + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 10000);
+    }
+
+    setInterval(createHeart, 300);
+
+    function showLove() {
+      document.getElementById("loveOverlay").style.display = "block";
+    }
+
+    function closeLove() {
+      document.getElementById("loveOverlay").style.display = "none";
+    }
+
+    // auto play music safely on iPhone by requiring user interaction
+    document.body.addEventListener('click', function() {
+      const music = document.getElementById("loveMusic");
+      if (music.paused) music.play();
+    }, { once: true });
+
+  </script>
